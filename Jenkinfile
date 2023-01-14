@@ -1,0 +1,20 @@
+pipeline{
+    agent any
+    stages{
+        stage("Should run when"){
+        
+        steps{
+            echo"${params.Shouldrun}"
+            
+        }
+        }
+        
+        stage("second stage"){
+            when {
+                expression {
+                    params.Shouldrun == true
+                }
+            }
+    
+    }
+}
