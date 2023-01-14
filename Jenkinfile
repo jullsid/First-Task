@@ -4,7 +4,7 @@ pipeline{
         stage("Should run when"){
         
         steps{
-            echo"${params.Shouldrun}"
+             echo "${params.Shouldrun}"
             
         }
         }
@@ -17,4 +17,5 @@ pipeline{
             }
     
     }
+}
 }
